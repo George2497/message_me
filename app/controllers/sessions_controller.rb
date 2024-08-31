@@ -1,10 +1,11 @@
 class SessionsController < ApplicationController
 
+  def new
+  end
+
   def create
   end
 
-  def new
-  end
 
   def index
   end
@@ -15,7 +16,7 @@ class SessionsController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
   end
 
 end
