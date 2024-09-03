@@ -32,7 +32,7 @@ gem "importmap-rails" #it's available by default on rails 7
 gem "semantic-ui-sass"
 gem "sassc-rails" #uncomment this line since it should be commented out by default on rails 7
 gem "sassc-rails"
-
+gem "byebug"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
