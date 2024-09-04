@@ -13,9 +13,5 @@ $(document).ready(function () {
 // });
 
 $(document).on('click', '.message .close', function () {
-  $(this)
-    .closest('.message')
-    .fadeOut('slow', function () {
-      $(this).remove();
-    });
+  $(this).closest('.message').transition('fade').remove();
 });
