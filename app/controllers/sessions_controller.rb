@@ -38,7 +38,7 @@ before_action :logged_in_redirect, only:[:new, :create]
   def logged_in_redirect
     if logged_in?
       flash[:error] = "You are already logged in"
-      redirect_to root_path
+      redirect_to root_path and return
     end
   end
 
