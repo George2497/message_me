@@ -15,3 +15,5 @@ $(document).ready(function () {
 $(document).on('click', '.message .close', function () {
   $(this).closest('.message').transition('fade').remove();
 });
+
+import 'channels';
