@@ -1,7 +1,7 @@
-<div class="content">
-  <div class="ui feed">
-    <% @messages.each do |message| %>
-      <em><%= message.user.username %></em>: <%= message.body %>
-    <% end %>
+<div class="event">
+  <div class="content">
+    <div class="summary">
+      <em><%= message.user.username %>: <%= message.body %></em>
+    </div>
   </div>
 </div>
