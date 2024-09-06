@@ -3,9 +3,23 @@ import '@hotwired/turbo-rails';
 import 'controllers';
 import * as jquery from 'jquery';
 import 'semantic-ui';
+import 'channels';
 
 $(document).ready(function () {
   $('.ui.dropdown').dropdown();
+});
+
+// Scroll to the bottom of the messages length [0] (to the bottom) each time this function is called
+// scroll_buttom = function () {
+//   if ($('#messages').length > 0) {
+//     $('#messages').scrollTop($('#messages')[0].scrollHeight);
+//   }
+// };
+
+$(document).on('turbo:load', function () {
+  if ($('#messages').length > 0) {
+    $('#messages').scrollTop($('#messages')[0].scrollHeight);
+  }
 });
 
 // $('.message .close').on('click', function () {
@@ -15,5 +29,3 @@ $(document).ready(function () {
 $(document).on('click', '.message .close', function () {
   $(this).closest('.message').transition('fade').remove();
 });
-
-import 'channels';
