@@ -22,6 +22,16 @@ $(document).on('turbo:load', function () {
   }
 });
 
+submit_message = function () {
+  $('#messages').on('keydown'),
+    function (e) {
+      if (e.key == 13) {
+        $('button').click();
+        e.target.value = '';
+      }
+    };
+};
+
 // $('.message .close').on('click', function () {
 //   $(this).closest('.message').transition('fade');
 // });
